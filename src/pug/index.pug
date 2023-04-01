@@ -1,5 +1,6 @@
 extends layouts/LayoutTheme
-include mixins/homes/Default
+//- include mixins/homes/Default
+include oppkey/Oppkey
 
 prepend styles
   link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
@@ -12,9 +13,9 @@ prepend scripts
 
 append mainContent
 
-  +DefaultHeader
-  +DefaultWhyUs
-  +DefaultVideo
+  +OppkeyHeader
+  +OppkeyWhyUs
+  +OppkeyVideo
   +DefaultServices
   +DefaultProcess
   +DefaultCta1

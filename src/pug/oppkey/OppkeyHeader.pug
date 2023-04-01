@@ -1,0 +1,54 @@
+mixin OppkeyHeader
+  +Section("container-fluid").py-0 
+    .row.h-100.border-bottom
+      .col-lg-6.px-0.order-lg-2(data-zanim-lg!={animation: "slide-left", delay: 0.4}  data-zanim-trigger='scroll')
+        .swiper-container.theme-slider.swiper-theme(data-swiper!={
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+           
+          loop: true,
+          effect: 'fade',
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: 'bullets',
+          },
+        }  data-zanim-lg!={animation: "zoom-out", delay: 0}  data-zanim-trigger='scroll')
+          .swiper-wrapper
+            .swiper-slide.min-vh-lg-100.py-9
+              +Background({image: `${CWD}assets/img/headers/header-3.jpg`})
+            .swiper-slide.min-vh-lg-100.py-9  
+              +Background({image: `${CWD}assets/img/headers/header-2.jpg`})
+            .swiper-slide.min-vh-lg-100.py-9  
+              +Background({image: `${CWD}assets/img/headers/header-12.jpg`})  
+          .swiper-pagination
+          .swiper-nav
+            .swiper-button-next.me-md-3
+            .swiper-button-prev.ms-md-3 
+
+      .col-lg-6.bg-white.py-7.py-md-8
+        .row.flex-center.h-100
+          .col-lg-10.text-black.text-center.text-lg-start(data-zanim-timeline!={} data-zanim-trigger='scroll')
+            .overflow-hidden
+              h4.text-uppercase.fw-normal.ls.text-white.bg-dark.p-1.rounded.d-inline-block(data-zanim-xs!={delay: 0.1}) renovating &nbsp;together
+            .overflow-hidden
+              h1.display-3.fs-5.fs-sm-6#sc(data-zanim-xs!={delay: 0.2})
+                span.text-decoration-underline oppkey
+                br
+                span.fw-light creative
+            .overflow-hidden
+              p.text-900.fs-0.mt-3.mt-md-5(data-zanim-xs!={delay: 0.3}) Creating marvelous user experience
+                br
+                | for your brand, seamlessly.
+            .overflow-hidden
+              .d-lg-flex.align-items-center.fw-bold.ls.mt-3.mt-md-5.text-uppercase(data-zanim-xs!={delay: 0.4})
+                h6.mb-lg-0 Follow Us:
+                .overflow-hidden
+                  a(href='#!' class='me-1')
+                    span.fab.fa-facebook.text-dark.me-2.ms-3.fs-0
+                  a(href='#!' class='me-1')
+                    span.fab.fa-twitter.text-dark.me-2.fs-0
+                  a(href='#!' class='me-1')
+                    span.fab.fa-google-plus-g.text-dark.fs-0

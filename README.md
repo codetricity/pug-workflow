@@ -1,10 +1,20 @@
-# gulp workflow test
+# Oppkey gulp workflow test
 
 This is a workflow example using pug to prepare for the use
 of the sparrow bootstrap template system. Instead of editing
 the HTML files directly, the sparrow system
 uses pug, sass, and gulp. This makes it easier to handle components
 such as the menu system.
+
+## Demo
+
+[https://codetricity.github.io/pug-workflow/](https://codetricity.github.io/pug-workflow/)
+
+## Use
+
+* run locally: `npm run start`
+* Edit the files in `/src/`
+* deploy to GitHub Pages: `npm run gh-deploy`
 
 ## technologies
 
