@@ -1,0 +1,48 @@
+:root, :root.light, :root .light {
+
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $grays {
+    --#{$prefix}gray-#{$color}: #{$value};
+  }
+  @each $color, $value in $brand-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  //---------rgb color ------------
+  @each $color, $value in $grays-rgb {
+    --#{$prefix}gray-#{$color}-rgb: #{$value};
+  }
+  @each $color, $value in $brand-colors-rgb {
+    --#{$prefix}#{$color}-rgb: #{$value};
+  }
+  --#{$prefix}dark-rgb: #{to-rgb(map-get($theme-colors, 'dark'))} ;
+  --#{$prefix}light-rgb: #{to-rgb(map-get($theme-colors, 'light'))};
+
+  --#{$prefix}transparent-50: #{rgba($white, 0.5)};
+  /* -------------------------------- Links ------------------------------- */
+  // --#{$prefix}link-color: #{map-get($theme-colors, 'primary')}; //not used
+  --#{$prefix}link-hover-color: #{$link-hover-color};
+
+
+  // ------------ Fancynav --------------
+  --#{$prefix}fancynav-togglerbar-bg: #{$fancynav-togglerbar-bg};
+  --#{$prefix}fancynav-collapse-bg: #{$fancynav-collapse-bg};
+  --#{$prefix}fancynav-link-color: #{$fancynav-link-color};
+
+
+  // ------------ Font --------------
+  --#{$prefix}font-serif: #{inspect($font-family-serif)};
+
+  --#{$prefix}headings-color: #{map-get($theme-colors, 'black')};
+
+  .btn-dark{
+
+    --#{$prefix}btn-hover-bg: #{shade-color( map-get($grays, '1100'), 80%)};
+    --#{$prefix}btn-active-bg: #{shade-color( map-get($grays, '1100'), 70%)};
+  }
+  
+  /* ---------------------------------- Form ---------------------------------- */
+  --#{$prefix}input-focus-border-color: #{tint-color($component-active-bg, 50%)};
+}

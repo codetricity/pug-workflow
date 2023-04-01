@@ -1,0 +1,29 @@
+mixin ThemeColorsDemo
+  .row
+    .col-12
+      h3 Theme colors
+    each val in colors
+      .col-md-6.mb-4
+        .row.flex-center.g-0
+          .col-auto
+            .component-example
+              .border.rounded-circle(class=`bg-${val}`)
+          .col
+            code .text-#{val}
+            br
+            code .bg-#{val}
+
+mixin GrayShadesDemo
+  .row
+    .col-12
+      h3  Gray shades
+    each val in grays
+      .col-md-6.mb-4
+        .row.flex-center.g-0
+          .col-auto
+            .component-example
+              .border.rounded-circle(class=`bg-${val}`)
+          .col
+            code .text-#{val}
+            br
+            code .bg-#{val}

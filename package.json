@@ -4,12 +4,16 @@
   "description": "pug web test",
   "main": "index.html",
   "scripts": {
+    "start": "concurrently 'npm run pug' 'npm run gulp'",
+    "pug": "pug src/pug/*.pug -o dist -P -w",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.1",
+    "concurrently": "^8.0.1",
     "gulp": "^4.0.2",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",

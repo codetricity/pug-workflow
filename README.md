@@ -6,6 +6,9 @@ the HTML files directly, the sparrow system
 uses pug, sass, and gulp. This makes it easier to handle components
 such as the menu system.
 
+## technologies
+
+* sparrow template 2.1.1
 * gulp
 * node v18.15.0
 * pug

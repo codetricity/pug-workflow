@@ -1,9 +1,28 @@
-doctype html
+extends layouts/LayoutTheme
+include mixins/homes/Default
 
-head
-    title pug workflow
-    link(rel='stylesheet', type='text/css', href='/style.css')
+prepend styles
+  link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
 
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`)  
+  script(src=`${CWD}vendors/progressbar/progressbar.min.js`)
+  script(src=`${CWD}vendors/rellax/rellax.min.js`) 
 
-body 
-    h1 hello, world
+append mainContent
+
+  +DefaultHeader
+  +DefaultWhyUs
+  +DefaultVideo
+  +DefaultServices
+  +DefaultProcess
+  +DefaultCta1
+  +DefaultProgressbar
+
+  +DefaultCta2
+  +DefaultPricingPlan
+  +DefaultCta3
+  +DefaultMembers
+  +DefaultGallery
+  +DefaultCta4

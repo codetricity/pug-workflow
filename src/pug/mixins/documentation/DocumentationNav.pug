@@ -1,0 +1,17 @@
+mixin DocumentationNav 
+  ul#components-nav.components-nav.list-unstyled
+    each item, index in sitemap.documentation
+      - var title = item.title.toLowerCase()
+      if activePage === title 
+        li
+          a.fw-bold(href=`${CWD}documentation/${title.toLowerCase()}.html`) 
+            +NavLinkTitle(title)
+      else if item.isActive == true 
+        li
+          a.text-800(href=`${CWD}documentation/${title.toLowerCase()}.html`) 
+            +NavLinkTitle(title)  
+      else
+        li
+          a.text-muted(href=`${CWD}documentation/${title.toLowerCase()}.html`) 
+            +NavLinkTitle(title)
+

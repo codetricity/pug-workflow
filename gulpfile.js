@@ -33,7 +33,7 @@ function browsersyncReload(cb) {
 }
 
 function watchTask() {
-    watch("src/pug/*.pug", series(pugTask, browsersyncReload));
+    // watch("src/pug/*.pug", series(pugTask, browsersyncReload));
     watch("dist/*.html", browsersyncReload)
     watch(['src/scss/*.scss'], series(scssTask, browsersyncReload));
 }
@@ -42,7 +42,7 @@ function watchTask() {
 
 exports.default = series(
     scssTask,
-    pugTask,
+    // pugTask,
     browsersyncServe,
     watchTask
 );
