@@ -1,0 +1,18 @@
+{
+  "name": "web-p",
+  "version": "1.0.0",
+  "description": "pug web test",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
+  }
+}
